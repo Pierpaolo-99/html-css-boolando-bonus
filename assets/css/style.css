@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --booleando-primary: #ff6900;
+    --booleando-light: #ffffff;
+    --booleando-dark: #000000;
+    --booleando-lighter: #e7e7e6;
+    --booleando-secondary: #008000;
+    --booleando-discount: #ff0000;
+}
+
+body{
+    font-family: "Heebo", serif;
+}
+
+/* Utilities */
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.space-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fixed{
+    position: fixed;
+    z-index: 10;
+}
+
+.py-3{
+    padding: 3rem 0;
+}
+
+/* Header */
+
+header{
+    background-color: var(--booleando-primary);
+    padding: 1rem;
+
+    nav,
+    .options{
+        gap: 1rem;
+
+        a{
+            color: var(--booleando-light);
+            text-decoration: none;
+
+            &:hover{
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/* Main */
+
+.card{
+    position: relative;
+    margin-bottom: 2rem;
+
+    .hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:hover{
+            display: none;
+            cursor: pointer;
+        }
+    }
+
+    .heart{
+        width: 50px;
+        font-size: 3rem;
+        text-align: center;
+        background-color: var(--booleando-light);
+        position: absolute;
+        right: 0;
+        top: 1rem;
+
+        &:hover{
+            color: var(--booleando-discount);
+            cursor: pointer;
+        }
+    }
+
+    .text{
+        background-color: var(--booleando-secondary);
+        display: inline-block;
+        padding: 0.5rem;
+        color: var(--booleando-light);
+        position: absolute;
+        bottom: 6.5rem;
+        left: 3.5rem;
+    }
+
+    .discount{
+        background-color: var(--booleando-discount);
+        display: inline-block;
+        padding: 0.5rem;
+        color: var(--booleando-light);
+        position: absolute;
+        left: 0;
+        bottom: 6.5rem;
+    }
+
+    .now{
+        color: var(--booleando-discount);
+    }
+
+    .before{
+        text-decoration: line-through;
+    }
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--booleando-dark);
+    color: var(--booleando-light);
+    padding: 1rem;
+
+    .info,
+    .icon{
+        gap: 1rem;
+    }
+
+    .footer_text{
+        padding-bottom: 0.5rem;
+    }
+}
